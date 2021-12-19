@@ -1,11 +1,13 @@
 import '../styles/globals.css'
 import Link from 'next/link'
+import maps from './maps'
 
 function Marketplace({ Component, pageProps }) {
   return (
     <div>
+        <div id="map-avi"/>
       <nav className="border-b p-6">
-        <p className="text-4xl font-bold">Metaverse Marketplace</p>
+        <p className="text-4xl font-bold">Chameleon NFT Properties</p>
         <div className="flex mt-4">
           <Link href="/">
             <a className="mr-4 text-pink-500">
@@ -14,12 +16,12 @@ function Marketplace({ Component, pageProps }) {
           </Link>
           <Link href="/create-item">
             <a className="mr-6 text-pink-500">
-              Sell Digital Asset
+              Sell NFT Properties
             </a>
           </Link>
           <Link href="/my-assets">
             <a className="mr-6 text-pink-500">
-              My Digital Assets
+              My NFT Properties Assets
             </a>
           </Link>
           <Link href="/creator-dashboard">
@@ -27,10 +29,16 @@ function Marketplace({ Component, pageProps }) {
               Creator Dashboard
             </a>
           </Link>
+          <Link href="/maps">
+            <a className="mr-6 text-pink-500">
+              Locate your Property on Map
+            </a>
+          </Link>
         </div>
       </nav>
       <Component {...pageProps} />
     </div>
+    
   )
 }
 
